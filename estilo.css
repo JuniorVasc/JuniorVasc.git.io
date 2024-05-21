@@ -1,0 +1,215 @@
+/* Estilos Globais */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333; /* Mudança na cor do texto para melhor contraste */
+  padding-bottom: 200px; /* Adiciona espaço na parte inferior para o rodapé */
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  margin-bottom: 20px; /* Margem inferior para separar os títulos do conteúdo */
+}
+
+p {
+  margin-bottom: 15px; /* Margem inferior para separar os parágrafos */
+  text-align: justify;
+}
+
+/* Títulos */
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: rgba(0, 0, 0, 0.5); /* Redução da opacidade */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.welcome-text {
+  font-style: italic;
+  font-size: 36px; /* Aumento do tamanho da fonte */
+  margin-bottom: 20px;
+  color: #fff; /* Texto em branco para contrastar com o cabeçalho */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajuste na cor de fundo ao passar o mouse */
+  border-radius: 5px;
+}
+
+/* Seções */
+section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Links Ativos */
+nav ul li a.active {
+  background-color: #555;
+}
+
+/* Status Online/Offline */
+.online {
+  color: green; /* Texto verde */
+}
+
+.offline {
+  color: red; /* Texto vermelho */
+}
+
+
+/* Rodapé */
+footer {
+  background-color: #333; /* Cor de fundo do rodapé */
+  color: #fff; /* Cor do texto */
+  padding: 20px 0; /* Espaçamento interno */
+  width: 100%;
+  position: fixed;
+  text-align: center; /* Alinhamento do texto */
+  box-shadow: 0px -3px 10px rgba(255, 254, 254, 0.2); /* Sombra no topo do rodapé */
+  z-index: 999; /* Garante que o rodapé fique sobre o conteúdo */
+  bottom: 0; /* Coloca o rodapé no final da página */
+  
+}
+
+
+footer p {
+  margin: 10px 0; /* Margem interna para separar os parágrafos */
+  font-size: 16px; /* Tamanho da fonte */
+  line-height: 1.5; /* Espaçamento entre linhas */
+color: black;
+text-align: end;
+}
+
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Redes Sociais */
+.redes-sociais {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.redes-sociais li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.redes-sociais li:last-child {
+  margin-right: 0;
+}
+
+.redes-sociais a {
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+  color: #aaa;
+}
+
+/* Foto de Perfil */
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Transforma o elemento em um círculo */
+  background-color: #ccc; /* Cor de fundo do círculo */
+  margin-right: 20px; /* Espaçamento à direita para separar da seção de mídia social */
+  float: left; /* Permite que o elemento flutue à esquerda */
+  background-image: url(ARB.png) ;
+  background-size: cover; /* Garante que a imagem cubra todo o círculo */
+  background-position: center; /* Centraliza a imagem dentro do círculo */
+}
+
+/* Última Seção */
+section:last-child {
+  margin-bottom: 200px; /* Adiciona margem na parte inferior do último section antes do rodapé */
+}
+
+/*Area do modal*/
+
+/* Estilos da janela modal */
+.modal {
+  display: none; /* Oculta a janela modal por padrão */
+  position: fixed; /* Permite que a janela modal fique fixa na tela */
+  z-index: 1000; /* Coloca a janela modal sobre outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  overflow: auto; /* Adiciona barra de rolagem se necessário */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe; /* Cor de fundo da janela modal */
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 30%;
+  max-height: 80%; /* Altura máxima da janela modal */
+  overflow-y: auto; /* Adiciona barra de rolagem vertical */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu portfólio</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <h1 class="welcome-text">@ArménioVasco</h1>
+    <header>        
+        <nav>
+            <ul>
+                <li><a href="#About" id="about-link"> Sobre</a></li>
+                <li><a href="habilidades.html">My skills</a></li>
+                <li id="status"><i class="fab fa-wifi"></i> Online</li>
+                <li>
+                    <select id="language-selector">
+                        <option value="en">English</option>
+                        <option value="pt">Português</option>
+                        <!-- Adicione outras opções de idioma conforme necessário -->
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h1 id="sobre-title">Hello</h1>
+        <p id="sobre-content"> My name's Arménio</p>
+        <p id="Text-body">I am a Mozambican, enthusiastic about Information and Communication Technologies, with training in the area. I have a passion for learning and implementing innovative solutions. With solid experience in PHP, HTML & CSS and Java, I am always looking for challenges that allow me to expand my knowledge and apply my skills in significant projects and also in the area of ​​computer networks, hardware and technical support. I am open to new opportunities and collaborations involving emerging technologies.</p>
+    </section>
+
+    <section id="Contacto">
+        <h1 id="Contact-t">contact</h1>
+        <p id="Text-body2"> you will find the different ways to contact me ((↓))</p>
+    </section>
+ 
+    <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <div class="profile-picture"></div>
+            <div class="social-media">
+                <h2>Connect with me</h2>
+                <ul class="redes-sociais">
+                    <li><a href="https://www.facebook.com/MenioVasco" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/seu_perfil" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/seu_perfil" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.gmail.com/seu_perfil" target="_blank"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="https://github.com/JuniorVasc" target="_blank"><i class="fab fab fa-github"></i></a></li>
+                    <li><a href="#" id="translate"><i class="fas fa-language"></i></a></li> <!-- Ícone de tradução -->
+                </ul>
+            </div>
+
+            
+            <p>Design by Arménio Vasco</p>
+        </div>
+    </footer>
+
+     <!-- Janela Modal -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>About</h2>
+            <p>This page was created to learn more about my skills.</p>
+            <p>I'm dedicating time and energy to creating a portfolio because I recognize the importance of having a visual, descriptive record of my work and achievements.</p>
+            <p>I really like telling my professional story</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para exibir e ocultar a janela modal
+        var modal = document.getElementById("about-modal"); // Obtenha a janela modal
+        var link = document.getElementById("about-link"); // Obtenha o link "Sobre"
+        var closeBtn = document.getElementsByClassName("close")[0]; // Obtenha o botão de fechar
+
+        // Quando o link "Sobre" é clicado, exiba a janela modal
+        link.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Quando o usuário clica no botão de fechar, oculte a janela modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Quando o usuário clica fora da janela modal, oculte-a
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    // Obtenha o seletor de idioma e adicione um ouvinte de evento para a mudança de idioma
+    var languageSelector = document.getElementById("language-selector");
+        languageSelector.addEventListener("change", function() {
+            // Obtenha o valor selecionado no seletor de idioma
+            var selectedLanguage = languageSelector.value;
+            
+            // Atualize o conteúdo das seções conforme o idioma selecionado
+            if (selectedLanguage === "pt") {
+                document.getElementById("sobre-title").innerText = "Olá";
+                document.getElementById("sobre-content").innerText = "Meu nome é Arménio";
+                document.getElementById("Text-body").innerText = "Sou moçambicano, entusiasta das Tecnologias de Informação e Comunicação, com formação na área. Tenho paixão por aprender e implementar soluções inovadoras. Com sólida experiência em PHP, HTML & CSS e Java, estou sempre em busca de desafios que me permitam ampliar meus conhecimentos e aplicar minhas habilidades em projetos significativos e também na área de redes de computadores, hardware e suporte técnico. Estou aberto a novas oportunidades e colaborações envolvendo tecnologias emergentes.";
+                document.getElementById("Contact-t").innerText = "Contato";
+                document.getElementById("Contact-t").innerText = "Contato";
+                // Atualize outros conteúdos conforme necessário
+            } else {
+                document.getElementById("sobre-title").innerText = "Hello";
+                document.getElementById("sobre-content").innerText = "My name's Arménio";      
+                document.getElementById("Text-body").innerText = "I am a Mozambican, enthusiastic about Information and Communication Technologies, with training in the area. I have a passion for learning and implementing innovative solutions. With solid experience in PHP, HTML & CSS and Java, I am always looking for challenges that allow me to expand my knowledge and apply my skills in significant projects and also in the area of ​​computer networks, hardware and technical support. I am open to new opportunities and collaborations involving emerging technologies.";
+                document.getElementById("Contact-t").innerText = "Contact";
+                document.getElementById("Contact-t").innerText = "Contact";
+                // Atualize outros conteúdos conforme necessário
+            }
+        });
+    </script>
+</body>
+</html>
